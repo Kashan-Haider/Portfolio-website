@@ -2,10 +2,12 @@
 import React from 'react'
 import { GlobeDemo } from '../ui/GlobeDemo'
 import {motion} from "framer-motion"
+import { BackgroundBeams } from '../ui/Background-beams'
 
 const WhyChooseMe = () => {
   return (
     <div className='relative pb-0 p-5 md:p-10 md:pb-0'>
+        <BackgroundBeams className='absolute top-0' />
         <div className='flex flex-col items-center justify-center' >
         <div className='md:w-[50vw]' >
           <motion.h1

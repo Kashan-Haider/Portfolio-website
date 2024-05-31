@@ -2,13 +2,14 @@
 import React from "react";
 import { AuroraBackground } from "../ui/Aurora-background";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import {Link} from "react-scroll";
 import { FaPaperPlane } from "react-icons/fa";
 import { GridBackgroundDemo } from "../ui/Grid-background";
+import { Spotlight } from "../ui/Spotlight";
 
 const Hero = () => {
   return (
-    <div className="" id="Home">
+    <div className="" id="home">
       <motion.div
       initial= {{opacity:0}}
       whileInView={{opacity:1}}
@@ -18,6 +19,10 @@ const Hero = () => {
         <></>
       </AuroraBackground>
       </motion.div>
+      {/* <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      /> */}
       <GridBackgroundDemo/>
       <div className="relative z-10 h-screen w-screen flex flex-col items-center justify-center text-center">
         <div className="flex w-full md:w-[70vw] lg:w-[60vw] justify-center items-center flex-col gap-2 capitalize px-5">
@@ -66,7 +71,11 @@ const Hero = () => {
         >
           <div className="bg-light flex absolute w-0 h-full rounded-lg top-0 left-0 group-hover:w-full transition-all duration-300"></div>
           <Link
-            href="#projects"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
             className="relative z-10 flex items-center gap-3 group-hover:text-black duration-300 px-8 py-2"
           >
             My Work

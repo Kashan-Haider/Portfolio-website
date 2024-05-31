@@ -32,9 +32,9 @@ const Navbar = () => {
       animate={{ y: 0}}
     >
       <div className={`flex justify-center items-center gap-5 md:gap-8 bg-[#00000057] hover:bg-[#00000093] transition-all duration-700 py-3 px-8 rounded-lg w-fit fixed ${scrollDirection === 'upward' ? 'translate-y-0' : '-translate-y-[100px]'} left-[50%] -translate-x-[50%] top-5 shadow-black shadow-lg capitalize text-sm font-light backdrop-blur-lg`}>
-        <NavLink path="/" title="Home" />
+        <NavLink path="home" title="Home" />
         <NavLink path="projects" title="Projects" />
-        <NavLink path="#" title="Testimonials" />
+        <NavLink path="skills" title="Skills" />
         <NavLink path="#" title="Contact" />
       </div>
     </motion.div>
