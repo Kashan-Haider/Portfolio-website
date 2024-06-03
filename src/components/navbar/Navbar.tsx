@@ -35,7 +35,7 @@ const Navbar = () => {
         <NavLink path="home" title="Home" />
         <NavLink path="projects" title="Projects" />
         <NavLink path="skills" title="Skills" />
-        <NavLink path="#" title="Contact" />
+        <NavLink path="contact" title="Contact" />
       </div>
     </motion.div>
     </div>

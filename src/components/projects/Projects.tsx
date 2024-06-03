@@ -41,12 +41,12 @@ const Projects = () => {
       link:"https://portfolio-awanpro786-gmailcom.vercel.app/",
       github:"https://github.com/Kashan-Haider/Portfolio/tree/main"
     },
-    // {
-    //   title:"Weather App",
-    //   description:"A simple website built using React js and Openweather API",
-    //   image:"/work/weather-app.png",
-    //   link:"https://dine-market-psi.vercel.app/",
-    // },
+    {
+      title:"Todo App",
+      description:"A simple Todo App built using Next js and MongoDB",
+      image:"/work/todo-app.png",
+      link:"https://todo-app-mongodb.vercel.app/",
+    },
     {
       title:"Portfolio Website",
       description:"Portfolio Website with amazing animations built using Next js and Framer Motion",

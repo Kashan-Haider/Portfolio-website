@@ -1,26 +1,45 @@
 "use client";
 import React from "react";
-
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 
 function Advantages() {
   return (
     <>
-        <h1 className="text-center text-3xl md:text-5xl font-bold" >Unlock Your <span className="text-white" >Perks</span></h1>
-        <p className="text-center tracking-wider text-xl" >See What Awaits You</p>
+      <motion.h1
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-center text-3xl md:text-5xl font-bold"
+      >
+        Unlock Your <span className="text-white">Perks</span>
+      </motion.h1>
+      <motion.p
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-center tracking-wider text-xl"
+      >
+        See What Awaits You
+      </motion.p>
       <div className="py-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-8">
-        <Card title="Server-Side Rendering - Lightning-Fast Websites" icon={<AceternityIcon />}>
+        <Card
+          title="Server-Side Rendering - Lightning-Fast Websites"
+          icon={<AceternityIcon />}
+        >
           <CanvasRevealEffect
             animationSpeed={5.1}
             containerClassName="bg-[#da8efa]"
             colors={[
-                [252, 252, 252],
-                [252, 252, 252],
-              ]}
+              [252, 252, 252],
+              [252, 252, 252],
+            ]}
           />
         </Card>
-        <Card title="Transform Your Vision into a Website—Fast!" icon={<AceternityIcon />}>
+        <Card
+          title="Transform Your Vision into a Website—Fast!"
+          icon={<AceternityIcon />}
+        >
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-black"
@@ -33,7 +52,10 @@ function Advantages() {
           {/* Radial gradient for the cute fade */}
           <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
         </Card>
-        <Card title="Experience the Elegance of Stunning Custom Websites" icon={<AceternityIcon />}>
+        <Card
+          title="Experience the Elegance of Stunning Custom Websites"
+          icon={<AceternityIcon />}
+        >
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-sky-600"
@@ -56,7 +78,10 @@ const Card = ({
 }) => {
   const [hovered, setHovered] = React.useState(false);
   return (
-    <div
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem]"
@@ -86,7 +111,7 @@ const Card = ({
           {title}
         </h2>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -128,5 +153,4 @@ export const Icon = ({ className, ...rest }: any) => {
   );
 };
 
-
-export default Advantages
+export default Advantages;

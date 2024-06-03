@@ -24,6 +24,7 @@ const config: Config = {
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        aurora: "aurora 60s linear infinite",
       },
       keyframes: {
         spotlight: {

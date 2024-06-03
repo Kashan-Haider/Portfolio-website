@@ -4,30 +4,18 @@ import { AuroraBackground } from "../ui/Aurora-background";
 import { motion } from "framer-motion";
 import {Link} from "react-scroll";
 import { FaPaperPlane } from "react-icons/fa";
-import { GridBackgroundDemo } from "../ui/Grid-background";
+import { GridBackgroundDemo } from "../ui/Dotted-background";
 import { Spotlight } from "../ui/Spotlight";
 
 const Hero = () => {
   return (
     <div className="" id="home">
-      <motion.div
-      initial= {{opacity:0}}
-      whileInView={{opacity:1}}
-      transition={{duration:3}}
-      >
-      <AuroraBackground className="absolute -z-10 w-full">
-        <></>
-      </AuroraBackground>
-      </motion.div>
-      {/* <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
-      /> */}
-      <GridBackgroundDemo/>
+      
+      <AuroraBackground className="">
       <div className="relative z-10 h-screen w-screen flex flex-col items-center justify-center text-center">
         <div className="flex w-full md:w-[70vw] lg:w-[60vw] justify-center items-center flex-col gap-2 capitalize px-5">
           <motion.p
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{
               opacity: 1,
               y: 0,
@@ -38,7 +26,7 @@ const Hero = () => {
             Unleash the power of dynamic web development with Next.js
           </motion.p>
           <motion.h1
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{
               opacity: 1,
               y: 0,
@@ -49,7 +37,7 @@ const Hero = () => {
             Turning ideas into flawless <span className="text-white" >user experiences</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{
               opacity: 1,
               y: 0,
@@ -61,7 +49,7 @@ const Hero = () => {
           </motion.p>
         </div>
         <motion.div
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{
             opacity: 1,
             y: 0,
@@ -83,6 +71,9 @@ const Hero = () => {
           </Link>
         </motion.div>
       </div>
+      <GridBackgroundDemo/>
+      </AuroraBackground>
+      
     </div>
   );
 };
